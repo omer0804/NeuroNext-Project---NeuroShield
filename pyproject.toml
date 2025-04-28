@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuro-dream-guard"
+version = "0.1.0"
+description = "Brain implant system for detecting nightmares and triggering lucid dreaming."
+authors = [
+  { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "mne",
+    "torch",
+    "torchaudio",
+    "torchvision",
+    "tensorflow",
+    "keras",
+    "flask",
+    "fastapi",
+    "uvicorn",
+    "pytest",
+    "jupyter",
+    "pyyaml"
+]

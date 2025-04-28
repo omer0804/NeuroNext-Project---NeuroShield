@@ -1,0 +1,61 @@
+# ====================================
+# NeuroShield - Global Project Settings
+# ====================================
+
+data_paths:
+  raw: data/raw/
+  processed: data/processed/
+  
+
+preprocessing:
+  eeg_bandpass_low: 0.5        
+  eeg_bandpass_high: 40.0      
+  window_size_seconds: 30      
+  normalize: true              
+  artifact_removal: true       
+
+model_training:
+  random_seed: 42
+  validation_split: 0.2
+  batch_size: 64
+  epochs: 50
+  learning_rate: 0.001
+
+models:
+  nightmare_detection:
+    type: "random_forest"
+    parameters:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+
+  stimulation_trigger:
+    type: "lstm"
+    parameters:
+      hidden_units: 128
+      num_layers: 2
+      dropout: 0.3
+      learning_rate: 0.001
+
+  multimodal_fusion:
+    type: "cnn_lstm"
+    parameters:
+      cnn_filters: 32
+      lstm_units: 64
+      dropout: 0.4
+      learning_rate: 0.0005
+
+real_time_system:
+  receiver_buffer_seconds: 5
+  prediction_interval_seconds: 2
+  stimulation_decision_threshold: 0.7
+
+stimulation:
+  pulse_duration_ms: 500
+  pulse_amplitude_ua: 100
+  max_stimulations_per_night: 3
+
+logging:
+  level: "INFO"
+  save_logs: true
+  logs_dir: logs/
