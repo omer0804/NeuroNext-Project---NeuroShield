@@ -5,6 +5,11 @@
 data_paths:
   raw: data/raw/
   processed: data/processed/
+  physiological: data/raw/apple_watch_data
+  heart_rate: data/raw/apple_watch_data/heart_rate
+  lables: data/raw/apple_watch_data/labels
+  motion: data/raw/apple_watch_data/motion
+  steps: data/raw/apple_watch_data/steps
   
 
 preprocessing:
