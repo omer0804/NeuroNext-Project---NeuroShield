@@ -10,6 +10,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import precision_score, recall_score, f1_score
 from sklearn.utils.class_weight import compute_class_weight
 import random
+from torchviz import make_dot
+from torchsummary import summary
 
 # Set seeds for reproducibility
 seed = 42
@@ -206,3 +208,9 @@ f1 = f1_score(all_targets, all_preds)
 print(f"\nPrecision: {precision:.2f}")
 print(f"Recall:    {recall:.2f}")
 print(f"F1 Score:  {f1:.2f}")
+
+# Save the last trained model
+model_path = "nightmare_detection_model.pth"
+torch.save(model.state_dict(), model_path)
+print(f"\nModel saved to {model_path}")
+

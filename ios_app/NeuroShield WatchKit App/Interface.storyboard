@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21507" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21501"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="NeuroShield_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="29" alignment="center" text="NeuroShield" textAlignment="center" id="IRh-bU-Ewf">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <label width="136" height="18" alignment="center" text="Not Monitoring" textAlignment="center" id="Msl-dA-Df8">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="136" height="22" alignment="center" text="--" textAlignment="center" id="J6n-S2-1F9">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <button width="1" height="40" alignment="center" title="Start Monitoring" id="Ry9-wO-uWf">
+                            <color key="backgroundColor" red="0.0" green="0.56862745098039214" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="startMonitoring" destination="AgC-eL-Hgc" id="U3e-FE-ufb"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" hidden="YES" title="Stop Monitoring" id="aPv-9r-JyH">
+                            <color key="backgroundColor" red="0.8980392157" green="0.25490196079999999" blue="0.2196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="stopMonitoring" destination="AgC-eL-Hgc" id="3Gn-bw-Ysb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="heartRateLabel" destination="J6n-S2-1F9" id="W5d-Ow-x68"/>
+                        <outlet property="startButton" destination="Ry9-wO-uWf" id="97w-5P-d6E"/>
+                        <outlet property="statusLabel" destination="Msl-dA-Df8" id="wOd-f6-gjf"/>
+                        <outlet property="stopButton" destination="aPv-9r-JyH" id="GXu-Om-rHf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+    </scenes>
+</document>
